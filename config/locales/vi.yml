@@ -1,0 +1,22 @@
+vi:
+  layouts:
+    application:
+      title: "Yoga Sprouts"
+    header:
+      title: "Yoga Sprouts"
+      home: "Yoga"
+      contact: "Liên hệ"
+      post: "Bài viết"
+      practice: "Thực hành"
+      yoga: "Yoga nâng cao"
+      video: "Video"
+      quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."
+      author: "Debasish Mridha"
+      learn_more: "Tìm hiểu thêm"
+    footer:
+      made: "Tạo bởi"
+      team: "JoyTeam"
+  static_pages:
+    home:
+      quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."
+      author: "Debasish Mridha"
