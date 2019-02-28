@@ -1,0 +1,66 @@
+<section id="blog_fashion" class="blog_fashion roomy-100">
+  <div class="container">
+    <div class="row">
+      <div class="main_blog_fashion">
+        <div class="col-md-8">
+          <div class="blog_fashion_left">
+            <div class="blog_fashion_img">
+              <img src="assets/images/fashion-img1.jpg" alt="" />
+            </div>
+            <div class="blog_fashion_content">
+              <ol class="breadcrumb">
+                <li><a href="#" class="text-black"><%= @posts.last.category_name %></a></li>
+                <li><a href="#" class="text-black"><%= @posts.last.created_at %></a></li>
+                <li><a href="#" class="text-black">2 comments</a></li>
+              </ol>
+              <a href="blog-details.html"><h2><%= @posts.last.title %></h2></a>
+              <p><%= truncate @posts.last.content.html_safe, length: Settings.max_length_text, :omission => "" , :escape => false if @posts.last.content.present? %>             
+              </p>
+              <div class="btn btn-default">
+                  <%= link_to "#" do %>
+                  <span><%= t ".read_more" %></span>
+                  <i class="fa fa-long-arrow-right"></i>
+                <% end %>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="blog_fashion_right">
+            <div class="fashion_test text-center">
+              <%= link_to image_tag("yoga2.jpg"), "#" %>
+              <h6 class="m-top-20"><%= t ".author1" %></h6>
+              <p class="m-top-20"><%= t ".content1" %></p>
+              <img class="m-top-20" src="assets/images/blog-sign.png" alt="" />
+            </div>
+            <div class="fashion_praspect m-top-40">
+              <div class="fashion_praspect_inner bg-black">
+                <p class="text-white"><%= t ".content2" %></p>
+                <p class="text-white"><%= t ".author2" %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="blog_area fix">
+        <% @posts.each do |post| %>
+          <div class="col-md-4">
+            <div class="blog_item m-top-30">
+              <div class="blog_item_img">
+                <%= image_tag post.thumbnail.to_s, alt: "" %>
+              </div>
+              <ol class="breadcrumb">
+                <li><a href="#" class="text-black"><%= post.category_name %></a></li>
+                <li><a href="#" class="text-black"><%= post.created_at %></a></li>
+              </ol>
+              <h5><%= post.title %></h5>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

@@ -12,7 +12,10 @@
           <li class="dropdown">
             <%= link_to t(".home"), class:"dropdown-toggle", data: {toggle:"dropdown"} %>
             <ul class="dropdown-menu">
-              <li class="dropdown-inside"><%= link_to t(".post"), "#" %></li>
+              <% if can? :create, Post %>
+                <li class="dropdown-inside"><%= link_to t(".create_post"), posts_new_path %></li>
+              <% end %>
+              <li class="dropdown-inside"><%= link_to t(".post"), posts_path %></li>
               <li class="dropdown-inside"><%= link_to t(".practice"), "#" %></li>
               <li class="dropdown-inside"><%= link_to t(".yoga"), "#" %></li>
               <li class="dropdown-inside"><%= link_to t(".video"), "#" %></li>

@@ -1,0 +1,42 @@
+class PostsController < ApplicationController
+  before_action :load_categories, only: %i(new create)
+  before_action :load_post, only: :show
+
+  def index
+    @posts = Post.order_by.page(params[:page]).per Settings.post_page
+  end
+
+  def show; end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @post = Post.new post_params
+    if @post.save
+      flash[:success] = t ".create_sucsess"
+      redirect_to posts_path
+    else
+      flash[:danger] = t ".create_fail"
+      render :new
+    end
+  end
+
+  private
+
+  def post_params
+    params.require(:post).permit :title, :content, :thumbnail, :user_id, :category_id
+  end
+
+  def load_categories
+    @categories = Category.select_categories
+  end
+
+  def load_post
+    @post = Post.find_by id: params[:id]
+    return if @post
+    flash[:danger] = t ".no_post"
+    redirect_to posts_path
+  end
+end

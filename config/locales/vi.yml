@@ -39,6 +39,7 @@ vi:
       quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."
       author: "Debasish Mridha"
       learn_more: "Tìm hiểu thêm"
+      create_post: "Tạo bài viết mới"
     footer:
       made: "Tạo bởi"
       team: "JoyTeam"
@@ -50,6 +51,16 @@ vi:
     admin_nav_side:
       users: "Quản lý người dùng"
       all_user: " Tất cả người dùng"
+  posts:
+    index:
+      read_more: "...Đọc thêm"
+      author1: "Bob Harper"
+      content1: "Yoga là suối dòng của tuổi trẻ. Bạn chỉ có thể trẻ mãi khi xương cốt của mình dẻo dai."
+      author2: "T. Guillemets"
+      content2: "Một nhiếp ảnh gia khiến người khác tạo dáng cho các bức ảnh của mình. Một giáo viên Yoga khiến người khác tạo dáng cho chính bản thân họ."
+    new:
+      new_post_title: "Tạo bài viết"
+      save: "Đăng bài"
   static_pages:
     home:
       quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."
