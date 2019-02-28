@@ -1,0 +1,130 @@
+<section id="blog_details" class="blog_details roomy-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="main_blog_details">
+          <div class="blog_details_left">
+            <div class="blog_details_img">
+              <img src="assets/images/blog-details-img1.jpg" alt="" />
+            </div>
+            <div class="blog_details_content">
+              <div class="blog_details_head m-top-40">
+                <div class="blog_date">
+                  <span><%= @post.created_at.year %></span> <br />
+                  <span><%= @post.created_at.month %></span>
+                </div>
+                <div class="head_text">
+                  <h2><%= @post.title %></h2>
+                  <ul class="list-inline">
+                      <li><a href="#" class="text-black"><%= @post.category_name %></a></li>
+                      <li><a href="#" class="text-black">Feb 28th 2015</a></li>
+                      <li><a href="#" class="text-black">2 comments</a></li>
+                      <% if current_user.id == @post.user_id %>
+                        <li><%= link_to t(".edit"), edit_post_path(@post.id) %></li>
+                        <li><%= link_to t(".delete"), post_path(@post.id), method: :delete, data: {confirm: t(".confirm_delete")}, class: "delete" %></li>
+                      <% end %>
+                  </ul>
+                </div>
+              </div> 
+              <div class="blog_details_figure m-top-40">
+                  <p><%= @post.content.html_safe %></p>
+              </div>
+              <div class="socail_share text-right m-top-60">
+                  <ul class="list-inline text-uppercase">
+                      <li><%= t ".share" %></li>
+                      <li>
+                        <%= link_to do %>
+                          <i class="fa fa-facebook"></i>
+                        <% end %>
+                      </li>
+                      <li>
+                        <%= link_to do %>
+                          <i class="fa fa-twitter"></i>
+                        <% end %>
+                        </li>
+                      <li>
+                        <%= link_to do %>
+                          <i class="fa fa-google-plus"></i>
+                        <% end %>
+                        </li>
+                      <li>
+                        <%= link_to do %>
+                          <i class="fa fa-instagram"></i>
+                        <% end %>
+                      </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="blog_saidbar sm-m-top-70">
+          <div class="said_ctg fix">
+            <h6 class="text-uppercase"><%= t ".category" %></h6>
+            <ul class="text-uppercase m-top-40">
+              <% @categories.each do |cate| %>
+                <li>
+                  <%= link_to do %>
+                    <span ><%= cate.name %></span>
+                  <% end %>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+          <div class="said_post fix m-top-70">
+            <h6 class="m-bottom-40 text-uppercase"><%= t ".recent_post" %></h6>
+            <% @posts.each do |post| %>
+              <div class="post_item">
+                <div class="item_img">
+                  <%= image_tag post.thumbnail.to_s, alt: "" %>
+                </div>
+                <div class="item_text">
+                  <h6><%=link_to post.title, post_path(post.id) %></h6>
+                  <p><i class="fa fa-clock-o"></i><%= post.created_at %></p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <div class="said_arc fix m-top-70">
+            <h6 class="text-uppercase">archives</h6>
+            <ul class="m-top-40">
+              <li><a href="">september 2015 <span class="pull-right">(29)</span></a></li>
+              <li><a href="">august 2015 <span class="pull-right">(29)</span></a></li>
+              <li><a href="">july 2015 <span class="pull-right">(29)</span></a></li>
+              <li><a href="">june 2015 <span class="pull-right">(29)</span></a></li>
+            </ul>
+          </div>
+
+          <div class="said_socail fix m-top-70">
+              <h6 class="text-uppercase">instagram</h6>
+              <div class="socail_items m-top-40">
+                  <div class="socail_item">
+                      <img src="assets/images/gram-img1.jpg" alt="" />
+                  </div>
+                  <div class="socail_item">
+                      <img src="assets/images/gram-img2.jpg" alt="" />
+                  </div>
+                  <div class="socail_item">
+                      <img src="assets/images/gram-img3.jpg" alt="" />
+                  </div>
+                  <div class="socail_item">
+                      <img src="assets/images/gram-img4.jpg" alt="" />
+                  </div>
+                  <div class="socail_item">
+                      <img src="assets/images/gram-img5.jpg" alt="" />
+                  </div>
+                  <div class="socail_item">
+                      <img src="assets/images/gram-img6.jpg" alt="" />
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div><!-- End off col-md-4 -->
+    </div><!-- End off row -->
+  </div><!-- End off container -->
+</section><!-- End off blog Fashion -->
+<div class="scrollup">
+  <a href="#"><i class="fa fa-chevron-up"></i></a>
+</div><!-- End off scroll up -->
