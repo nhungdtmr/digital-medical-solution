@@ -154,6 +154,7 @@ p {
 img {
   max-width: 100%;
 }
+
 textarea,
 input[type="text"],
 input[type="password"],
@@ -1052,6 +1053,7 @@ About section style
 ==========================================================================*/
 .gallery{
   overflow: hidden;
+  padding-bottom: 100px;
 }
 
 /* ---- button ---- */
@@ -1724,8 +1726,7 @@ Blog Details Page
 .blog_details_content{}
 .blog_details_head{}
 .blog_details_head .blog_date{
-  float: left;
-  width:50px;
+  width:104px;
   margin-right: 20px;
 }
 .blog_details_head .blog_date span{
@@ -1849,5 +1850,21 @@ Blog Details Page
 }
 
 .body_padding {
-  padding-top: 120px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
+
+.blog_saidbar {
+  padding-top: 70px;
+}
+/*=============video page ==============*/
+
+.video_view {
+  width: 100%;
+}
+
+video {
+  width: 350px;
+}
+
+

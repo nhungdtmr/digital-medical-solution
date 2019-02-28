@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     get "posts/new"
     post "posts/create"
     resources :posts
+    resources :videos
   end
 
   namespace :admin do

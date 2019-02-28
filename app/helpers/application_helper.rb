@@ -19,4 +19,8 @@ module ApplicationHelper
     params_page = 1 if params_page.nil?
     (params_page.to_i - 1) * per_page.to_i + index.to_i + 1
   end
+
+  def current_user? user
+    user == current_user.id
+  end
 end

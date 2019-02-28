@@ -1,4 +1,9 @@
 vi:
+  time:
+    formats:
+      default: "%d, %B, %Y"
+      long: "%d, %b "
+      short: "%Y"
   admin:
     users:
       index:
@@ -39,7 +44,9 @@ vi:
       quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."
       author: "Debasish Mridha"
       learn_more: "Tìm hiểu thêm"
+      upload: "Tạo bài viết & video"
       create_post: "Tạo bài viết mới"
+      create_video: "Tải Video lên"
     footer:
       made: "Tạo bởi"
       team: "JoyTeam"
@@ -61,6 +68,8 @@ vi:
     new:
       new_post_title: "Tạo bài viết"
       save: "Đăng bài"
+      create_success: "Tạo thành công"
+      create_fail: "Lỗi"
     show:
       no_post: "Không có bài viết"
       share: "Chia sẻ bài viết này"
@@ -69,6 +78,8 @@ vi:
       confirm_delete: "Bạn có chắc chắn muốn xóa bài viết này chứ?"
       edit: "Sửa"
       delete: "Xóa"
+      space: " "
+      stroke: " |"
     edit:
       title: "Sửa bài viết"
       update: "Cập nhật"
@@ -78,6 +89,25 @@ vi:
       author: "Debasish Mridha"
       yogis_read: "Yogis đọc"
       description: "Những bài viết về thực hành và lối sống yoga được Yoga Sprouts chọn lọc viết và dịch. Hy vọng bạn sẽ tìm thấy những thông tin, kiến thức hay câu chuyện hữu ích"
+      yogis_watch: "Yogis xem"
+      des_watch: "Những video hay và bổ ích được Yoga Sprouts tuyển chọn dịch và phụ đề"
+  videos:
+    no_video: "Không có video nào"
+    new:
+      title: "Tải video"
+      save: "Lưu"
+    index:
+      videos: "VIDEOS"
+      stroke: " |"
+    edit:
+      title: "Sửa video"
+      update: "Cập nhật"
+    show:
+      stroke: " |"
+      confirm_delete: "Bạn có chắc chắn muốn xóa video này chứ?"
+      edit: "Sửa"
+      delete: "Xóa"
+      share: "Chia sẻ"
   welcomes:
     login_modal:
       sign_in: "Đăng nhập"
