@@ -300,4 +300,6 @@ Devise.setup do |config|
   # Enable devise to respond with JSON
   # config.http_authenticatable_on_xhr = false
   # config.navigational_formats = ["*/*", :html, :json]
+  # config.omniauth :facebook, ENV["FACEBOOK_ID"], ENV["FACEBOOK_SECRET_KEY"], callback_url: "http://localhost:3000/users/auth/facebook/callback"
+  config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"], { }
 end

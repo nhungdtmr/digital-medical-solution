@@ -23,6 +23,8 @@ gem "carrierwave"
 gem "mini_magick"
 gem "rails-controller-testing"
 gem "acts_as_votable"
+gem "omniauth-google-oauth2"
+gem "figaro"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
