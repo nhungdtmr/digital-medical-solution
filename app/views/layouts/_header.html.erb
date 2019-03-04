@@ -5,11 +5,7 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
           <i class="fa fa-bars"></i>
         </button>
-        <%= link_to image_tag("logo (1).png"), "#"%>
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/images/logo.png" class="logo logo-display" alt="">
-          <img src="assets/images/logo-black.png" class="logo logo-scrolled" alt="">
-        </a>
+        <%= link_to image_tag("logo (1).png"), root_url %>
       </div>
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
@@ -22,7 +18,14 @@
               <li class="dropdown-inside"><%= link_to t(".video"), "#" %></li>
             </ul>
           </li>
-          <li><%= link_to t(".contact"), "#" %></li>      
+          <li><%= link_to t(".contact"), static_pages_contact_path %></li>
+          <% if user_signed_in? %>
+            <li class="nav-item active">
+              <%= link_to t(".logout"), destroy_user_session_path, method: :delete %>  
+            </li>        
+          <% else %>
+            <li><%= link_to t(".sign_in"), "#signin", "data-toggle" => "modal", :class => 'btn btn-small sign_in' %></li>
+          <% end %>
         </ul>
       </div>
     </div>  

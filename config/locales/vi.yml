@@ -1,4 +1,16 @@
 vi:
+  devise:
+    confirmations:
+      new:
+        title: "Gửi lại hướng dẫn xác nhận"
+    mailer:
+      confirmation_instructions:
+        welcome: "Chào mừng bạn"
+        content: "Bạn có thể xác nhận email tài khoản của mình thông qua liên kết dưới đây:"
+        confirm: "Xác nhận tài khoản của tôi"
+    shared:
+      links:
+        sign_up: "Đăng ký tài khoản mới"
   layouts:
     application:
       title: "Yoga Sprouts"
@@ -20,3 +32,13 @@ vi:
     home:
       quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."
       author: "Debasish Mridha"
+  welcomes:
+    login_modal:
+      sign_in: "Đăng nhập"
+      email: "Email"
+      pass: "Mật khẩu"
+      close: "Đóng"
+    sign_up_modal:
+      sign_up: "Đăng ký tài khoản mới"
+      save: "Đăng ký"
+      close: "Đóng"
