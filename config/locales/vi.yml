@@ -1,4 +1,17 @@
 vi:
+  admin:
+    users:
+      index:
+        title: "Tất cả người dùng"
+        confirm_delete: "Bạn chắc chắn chứ?"
+        index: "STT"
+        email: "Email"
+        delete: "Xóa"
+        name: "Tên"
+        phone: "Số điện thoại"
+        address: "Địa chỉ"
+        delete_fail: "Không xóa được"
+        delete_success: "Xóa thành công"
   devise:
     confirmations:
       new:
@@ -29,6 +42,14 @@ vi:
     footer:
       made: "Tạo bởi"
       team: "JoyTeam"
+    admin_layout:
+      title: "Admin page"
+    admin_nav_top:
+      web: "Website"
+      title: "Trang quản lý"
+    admin_nav_side:
+      users: "Quản lý người dùng"
+      all_user: " Tất cả người dùng"
   static_pages:
     home:
       quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."

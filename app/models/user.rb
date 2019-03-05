@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_many :comments
   has_many :emotions
   has_many :videos
+  enum role: %i(member admin guest)
 
-  validate :name
+  scope :order_by, -> {order created_at: :desc}
+
 end
