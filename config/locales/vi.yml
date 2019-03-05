@@ -11,6 +11,7 @@ vi:
     shared:
       links:
         sign_up: "Đăng ký tài khoản mới"
+        forgot_pass: "Quên mật khẩu?"
   layouts:
     application:
       title: "Yoga Sprouts"
@@ -41,4 +42,18 @@ vi:
     sign_up_modal:
       sign_up: "Đăng ký tài khoản mới"
       save: "Đăng ký"
+      close: "Đóng"
+    forgot_pass_modal:
+      forgot_pass_title: "Quên mật khẩu"
+      send: "Gửi cho tôi hướng dẫn đặt lại mật khẩu"
+      close: "Đóng"
+    edit_modal:
+      title: "Sửa thông tin "
+      notice: "để trống nếu bạn không muốn thay đổi"
+      minimum: "Tối thiểu ký tự"
+      confirm: "Hiện đang chờ xác nhận cho: "
+      current_confirm: "(chúng tôi cần mật khẩu hiện tại của bạn để xác nhận thay đổi của bạn)"
+      update: "Cập nhật"
+      cancel: "Hủy tài khoản của tôi"
+      sure: Bạn có chắc chứ?
       close: "Đóng"
