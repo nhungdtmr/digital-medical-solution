@@ -10,5 +10,5 @@ class User < ApplicationRecord
   enum role: %i(member admin guest)
 
   scope :order_by, -> {order created_at: :desc}
-
+  scope :select_users, -> {select :id, :name}
 end

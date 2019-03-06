@@ -36,3 +36,4 @@
 /config/database.yml
 /config/credentials.yml.enc
 /config/storage.yml
+/public/uploads/*
