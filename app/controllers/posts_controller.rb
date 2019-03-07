@@ -1,12 +1,14 @@
 class PostsController < ApplicationController
-  before_action :load_categories, only: %i(new create)
-  before_action :load_post, only: :show
+  before_action :load_categories, only: %i(new create edit show)
+  before_action :load_post, only: %i(show edit update destroy)
 
   def index
     @posts = Post.order_by.page(params[:page]).per Settings.post_page
   end
 
-  def show; end
+  def show
+    @posts = Post.order_by.limit Settings.recent_post
+  end
 
   def new
     @post = Post.new
@@ -20,6 +22,27 @@ class PostsController < ApplicationController
     else
       flash[:danger] = t ".create_fail"
       render :new
+    end
+  end
+
+  def edit; end
+
+  def update
+    if @post.update post_params
+      flash[:success] = t ".update_sucess"
+      redirect_to posts_path
+    else
+      flash[:danger] = t ".create_fail"
+      render :edit
+    end
+  end
+
+  def destroy
+    if @post.destroy
+      flash[:success] = t ".delete_success"
+      redirect_to posts_path
+    else
+      flash[:danger] = t ".delete_fail"
     end
   end
 

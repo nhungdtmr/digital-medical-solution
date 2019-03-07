@@ -3,3 +3,5 @@ post_page: 20
 admin_user_page: 10
 min_length_text: 100
 max_length_text: 600
+recent_post: 5
+post_homepage: 1

@@ -11,7 +11,7 @@
       <div class="form-group">
         <%= f.label :thumbnail %><br/>
         <%= f.file_field :thumbnail, class: "upload-image" %>
-      </div>
+      </div><br>
       <div>
         <%= f.label :category %>
         <%= f.select :category_id do %>
@@ -23,7 +23,9 @@
       <div>
         <%= f.hidden_field :user_id, value: current_user.id %>
       </div>
-      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+      <div class="text-center">
+        <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+      </div>
     <% end %>
   </div>
 </div>
