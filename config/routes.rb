@@ -8,6 +8,9 @@ Rails.application.routes.draw do
     get "posts/new"
     post "posts/create"
     resources :posts
+    resources :posts do
+      resources :votes, only: %i(create destroy)
+    end
     resources :videos
   end
 

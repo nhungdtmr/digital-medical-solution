@@ -108,6 +108,9 @@ vi:
       edit: "Sửa"
       delete: "Xóa"
       share: "Chia sẻ"
+  votes:
+    vote_form:
+      vote: "Lượt thích: "
   welcomes:
     login_modal:
       sign_in: "Đăng nhập"

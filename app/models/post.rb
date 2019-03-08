@@ -4,6 +4,7 @@ class Post < ApplicationRecord
   has_many :comments
   has_many :emotions
   mount_uploader :thumbnail, PictureUploader
+  acts_as_votable
 
   delegate :name, to: :category, prefix: :category, allow_nil: true
   delegate :name, to: :user, prefix: :user, allow_nil: true
