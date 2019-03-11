@@ -30,6 +30,7 @@ vi:
       links:
         sign_up: "Đăng ký tài khoản mới"
         forgot_pass: "Quên mật khẩu?"
+        sign_in_with: "Đăng nhập với Google!"
   layouts:
     application:
       title: "Yoga Sprouts"
@@ -47,6 +48,10 @@ vi:
       upload: "Tạo bài viết & video"
       create_post: "Tạo bài viết mới"
       create_video: "Tải Video lên"
+      sign_in: "Đăng nhập"
+      admin_page: "Trang quản lý"
+      edit: "Sửa profile"
+      logout: "Đăng xuất"
     footer:
       made: "Tạo bởi"
       team: "JoyTeam"
