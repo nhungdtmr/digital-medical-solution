@@ -22,6 +22,7 @@ gem "ckeditor", "~> 4.3"
 gem "carrierwave"
 gem "mini_magick"
 gem "rails-controller-testing"
+gem "acts_as_votable"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
