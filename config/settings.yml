@@ -5,3 +5,5 @@ min_length_text: 100
 max_length_text: 600
 recent_post: 5
 post_homepage: 1
+video_pages: 10
+video_homepage: 3

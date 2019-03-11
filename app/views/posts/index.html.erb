@@ -12,17 +12,16 @@
                 <li><a href="#" class="text-black"><%= @posts.last.category_name %></a></li>
                 <li><a href="#" class="text-black"><%= @posts.last.created_at %></a></li>
                 <li><a href="#" class="text-black">2 comments</a></li>
-                
               </ol>
               <h2><%= link_to @posts.last.title, post_path(@posts.last.id) %></h2></a>
               <p><%= truncate @posts.last.content.html_safe, length: Settings.max_length_text, :omission => "" , :escape => false if @posts.last.content.present? %>             
               </p>
               <div class="btn btn-default">
-                  <%= link_to post_path(@posts.last.id) do %>
+                <%= link_to post_path(@posts.last.id) do %>
                   <span><%= t ".read_more" %></span>
                   <i class="fa fa-long-arrow-right"></i>
                 <% end %>
-                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -1,8 +1,9 @@
 FactoryBot.define do
   factory :user do
-    name {FFake::Name.name}
-    email {FFake::Internet.email}
-    phone_number {FFake::PhoneNumber.phone_number}
-    address {FFake::Address.street_address}
+    name {FFaker::Name.name}
+    email {FFaker::Internet.email}
+    password {"111111"}
+    phone_number {FFaker::PhoneNumber.phone_number}
+    address {FFaker::Address.street_address}
   end
 end

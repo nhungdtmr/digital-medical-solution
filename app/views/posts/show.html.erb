@@ -1,58 +1,57 @@
-<section id="blog_details" class="blog_details roomy-100">
+<section id="blog_details" class="blog_details">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
         <div class="main_blog_details">
           <div class="blog_details_left">
-            <div class="blog_details_img">
-              <img src="assets/images/blog-details-img1.jpg" alt="" />
-            </div>
             <div class="blog_details_content">
               <div class="blog_details_head m-top-40">
-                <div class="blog_date">
-                  <span><%= @post.created_at.year %></span> <br />
-                  <span><%= @post.created_at.month %></span>
+                <div class="col-md-2 blog_date">
+                  <span><%= l(@post.created_at, format: :short) %></span> <br />
+                  <span><%= l(@post.created_at, format: :long) %></span>
                 </div>
                 <div class="head_text">
                   <h2><%= @post.title %></h2>
                   <ul class="list-inline">
-                      <li><a href="#" class="text-black"><%= @post.category_name %></a></li>
-                      <li><a href="#" class="text-black">Feb 28th 2015</a></li>
-                      <li><a href="#" class="text-black">2 comments</a></li>
-                      <% if current_user.id == @post.user_id %>
-                        <li><%= link_to t(".edit"), edit_post_path(@post.id) %></li>
-                        <li><%= link_to t(".delete"), post_path(@post.id), method: :delete, data: {confirm: t(".confirm_delete")}, class: "delete" %></li>
+                    <li class="text-black"><%= link_to @post.category_name %><%= t ".stroke" %></li>
+                    <li class="text-black"><%= @post.user_name %><%= t ".stroke" %></li>
+                    <li><a href="#" class="text-black">2 comments</a></li>
+                    <% if user_signed_in? %>
+                      <% if current_user? @post.user_id %>
+                        <li class="text-black"><%= link_to t(".edit"), edit_post_path(@post.id) %><%= t ".stroke" %></li>
+                        <li class="text-black"><%= link_to t(".delete"), post_path(@post.id), method: :delete, data: {confirm: t(".confirm_delete")}, class: "delete" %></li>
                       <% end %>
+                    <% end %>
                   </ul>
                 </div>
               </div> 
               <div class="blog_details_figure m-top-40">
-                  <p><%= @post.content.html_safe %></p>
+                <p><%= @post.content.html_safe %></p>
               </div>
               <div class="socail_share text-right m-top-60">
-                  <ul class="list-inline text-uppercase">
-                      <li><%= t ".share" %></li>
-                      <li>
-                        <%= link_to do %>
-                          <i class="fa fa-facebook"></i>
-                        <% end %>
-                      </li>
-                      <li>
-                        <%= link_to do %>
-                          <i class="fa fa-twitter"></i>
-                        <% end %>
-                        </li>
-                      <li>
-                        <%= link_to do %>
-                          <i class="fa fa-google-plus"></i>
-                        <% end %>
-                        </li>
-                      <li>
-                        <%= link_to do %>
-                          <i class="fa fa-instagram"></i>
-                        <% end %>
-                      </li>
-                  </ul>
+                <ul class="list-inline text-uppercase">
+                  <li><%= t ".share" %></li>
+                  <li>
+                    <%= link_to do %>
+                      <i class="fa fa-facebook"></i>
+                    <% end %>
+                  </li>
+                  <li>
+                    <%= link_to do %>
+                      <i class="fa fa-twitter"></i>
+                    <% end %>
+                    </li>
+                  <li>
+                    <%= link_to do %>
+                      <i class="fa fa-google-plus"></i>
+                    <% end %>
+                    </li>
+                  <li>
+                    <%= link_to do %>
+                      <i class="fa fa-instagram"></i>
+                    <% end %>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -96,31 +95,6 @@
               <li><a href="">june 2015 <span class="pull-right">(29)</span></a></li>
             </ul>
           </div>
-
-          <div class="said_socail fix m-top-70">
-              <h6 class="text-uppercase">instagram</h6>
-              <div class="socail_items m-top-40">
-                  <div class="socail_item">
-                      <img src="assets/images/gram-img1.jpg" alt="" />
-                  </div>
-                  <div class="socail_item">
-                      <img src="assets/images/gram-img2.jpg" alt="" />
-                  </div>
-                  <div class="socail_item">
-                      <img src="assets/images/gram-img3.jpg" alt="" />
-                  </div>
-                  <div class="socail_item">
-                      <img src="assets/images/gram-img4.jpg" alt="" />
-                  </div>
-                  <div class="socail_item">
-                      <img src="assets/images/gram-img5.jpg" alt="" />
-                  </div>
-                  <div class="socail_item">
-                      <img src="assets/images/gram-img6.jpg" alt="" />
-                  </div>
-              </div>
-          </div>
-        </div>
       </div><!-- End off col-md-4 -->
     </div><!-- End off row -->
   </div><!-- End off container -->

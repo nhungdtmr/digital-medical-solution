@@ -6,5 +6,6 @@ class Post < ApplicationRecord
   mount_uploader :thumbnail, PictureUploader
 
   delegate :name, to: :category, prefix: :category, allow_nil: true
+  delegate :name, to: :user, prefix: :user, allow_nil: true
   scope :order_by, -> {order created_at: :desc}
 end

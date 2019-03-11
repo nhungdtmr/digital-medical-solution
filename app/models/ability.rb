@@ -6,7 +6,7 @@ class Ability
     if user.admin?
       can :manage, :all
     elsif user.member?
-      can [:create, :update], Post
+      can [:create, :update], [Post, Video]
       can :read, :all
     else
       can :read, :all
