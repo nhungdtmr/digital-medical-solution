@@ -8,6 +8,8 @@ class PostsController < ApplicationController
 
   def show
     @posts = Post.order_by.limit Settings.recent_post
+    @comment = Comment.new
+    @comments = @post.comments
   end
 
   def new
