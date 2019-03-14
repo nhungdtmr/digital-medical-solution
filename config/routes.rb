@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     resources :posts do
       resources :votes, only: %i(create destroy)
       resources :comments, only: %i(create destroy)
+      resources :follows, only: %i(create destroy)
     end
     resources :videos
     get "contact-me", to: "messages#new", as: "new_message"

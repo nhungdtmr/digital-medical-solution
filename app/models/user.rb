@@ -10,6 +10,8 @@ class User < ApplicationRecord
   has_many :videos
   enum role: %i(member admin guest)
   acts_as_voter
+  acts_as_follower
+  acts_as_followable
 
   scope :order_by, -> {order created_at: :desc}
   scope :select_users, -> {select :id, :name}
