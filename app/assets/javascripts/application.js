@@ -5,4 +5,5 @@
 //= require activestorage
 //= require turbolinks
 //= require ckeditor/init
+//= require rails_emoji_picker
 //= require_tree .

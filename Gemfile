@@ -25,6 +25,8 @@ gem "rails-controller-testing"
 gem "acts_as_votable"
 gem "omniauth-google-oauth2"
 gem "figaro"
+gem "closure_tree"
+gem "rails_emoji_picker"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

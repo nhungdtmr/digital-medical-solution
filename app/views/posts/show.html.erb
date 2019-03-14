@@ -15,7 +15,7 @@
                   <ul class="list-inline">
                     <li class="text-black"><%= link_to @post.category_name %><%= t ".stroke" %></li>
                     <li class="text-black"><%= @post.user_name %><%= t ".stroke" %></li>
-                    <li><a href="#" class="text-black">2 comments</a></li>
+                    <li><a href="#" class="text-black"><%= @post.comments.count %><%= t ".comment_count" %></a></li>
                     <% if user_signed_in? %>
                       <% if current_user? @post.user_id %>
                         <li class="text-black"><%= link_to t(".edit"), edit_post_path(@post.id) %><%= t ".stroke" %></li>
@@ -62,6 +62,13 @@
             </div>
           </div>
           <hr />
+        </div>
+        <div class="blog_comments">
+          <h4 class="m-bottom-30"><%= t ".comment" %></h4>
+          <div class="row comment_row" >
+            <%= render "comments/form", post: @post, parent_id: nil, comment_new: @comment %>
+            <%= comments_tree_for @post.comments.hash_tree(limit_depth: 3)%>
+          </div>
         </div>
       </div>
       <div class="col-md-4">

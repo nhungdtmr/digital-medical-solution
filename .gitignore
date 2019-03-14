@@ -38,3 +38,5 @@
 /config/storage.yml
 /public/uploads/*
 /config/application.yml
+/app/assets/images/emoji/*
+/app/assets/images/emoji_picker/*

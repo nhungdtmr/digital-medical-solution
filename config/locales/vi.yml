@@ -1,7 +1,7 @@
 vi:
   time:
     formats:
-      default: "%d, %B, %Y"
+      default: "%H:%M:%S | %d, %B, %Y"
       long: "%d, %b "
       short: "%Y"
   admin:
@@ -17,6 +17,16 @@ vi:
         address: "Địa chỉ"
         delete_fail: "Không xóa được"
         delete_success: "Xóa thành công"
+  comments:
+    comment:
+      reply: "Trả lời"
+      delete: "Xóa"
+      confirm_delete: "Bạn chắc chắn chứ?"
+    form:
+      write_comment: "Viết bình luận"
+      comment: "Bình luận"
+      not_member: "Không phải thành viên, hãy đăng nhập!"
+      sign_in: "Đăng nhập để bình luận"
   devise:
     confirmations:
       new:
@@ -85,6 +95,8 @@ vi:
       delete: "Xóa"
       space: " "
       stroke: " |"
+      comment: "Bình luận"
+      comment_count: " bình luận |"
     edit:
       title: "Sửa bài viết"
       update: "Cập nhật"

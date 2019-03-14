@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     resources :posts
     resources :posts do
       resources :votes, only: %i(create destroy)
+      resources :comments, only: %i(create destroy)
     end
     resources :videos
   end
