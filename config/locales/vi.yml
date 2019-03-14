@@ -65,6 +65,8 @@ vi:
     footer:
       made: "Tạo bởi"
       team: "JoyTeam"
+      address: "Địa chỉ"
+      detail: "Tòa Handico, Hà Nội, Việt Nam"
     admin_layout:
       title: "Admin page"
     admin_nav_top:
@@ -73,6 +75,28 @@ vi:
     admin_nav_side:
       users: "Quản lý người dùng"
       all_user: " Tất cả người dùng"
+  message_mailer:
+    contact_me:
+      subject: "Message from www.murdo.ch"
+      message: "Message"
+  messages:
+    new: 
+      contact: "Liên hệ với chúng tôi để có những lời khuyên hữu ích nhất!"
+      address: "Địa chỉ"
+      detail: "Tòa Handico, Hà Nội, Việt Nam"
+      phone: "Số điện thoại"
+      phone1: "(+84) - 123 - 456 - 789"
+      phone2: "(+84) - 321 - 654 - 987"
+      email: "Email"
+      email1: "abc@gmail.com"
+      email2: "xyz@yahoo.com"
+      your_name: "Tên *"
+      your_email: "Email *"
+      your_message: "Nội dung *"
+      send: "Gửi"
+    create:
+      received: "Chúng tôi đã nhận được tin nhắn của bạn và sẽ liên lạc sớm!"
+      error: "Có lỗi khi gửi tin nhắn của bạn. Vui lòng thử lại."
   posts:
     index:
       read_more: "...Đọc thêm"
