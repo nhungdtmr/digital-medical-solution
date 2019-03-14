@@ -1,9 +1,17 @@
 class PostsController < ApplicationController
-  before_action :load_categories, only: %i(new create edit show)
+  before_action :load_categories, only: %i(new create edit index show)
   before_action :load_post, only: %i(show edit update destroy)
 
   def index
     @posts = Post.order_by.page(params[:page]).per Settings.post_page
+    if params[:category]
+      @category = params[:category]
+      @posts = Post.order_by.filter_post_by_type(params[:category]).page(params[:page]).per Settings.post_page
+    end
+    respond_to do |format|
+      format.html
+      format.js {render :index}
+    end    
   end
 
   def show
