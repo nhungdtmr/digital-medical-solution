@@ -119,7 +119,7 @@ vi:
       no_post: "Không có bài viết"
       share: "Chia sẻ bài viết này"
       category: "Danh mục"
-      recent_post: "Bài viết gần đây"
+      relative_post: "Bài viết liên quan"
       confirm_delete: "Bạn có chắc chắn muốn xóa bài viết này chứ?"
       edit: "Sửa"
       delete: "Xóa"

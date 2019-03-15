@@ -15,7 +15,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @posts = Post.order_by.limit Settings.recent_post
+    @relative_posts = Post.order_by_relative_category(@post.category_id).limit Settings.recent_post
     @comment = Comment.new
     @comments = @post.comments
   end
