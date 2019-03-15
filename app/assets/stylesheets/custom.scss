@@ -2006,3 +2006,11 @@ input, textarea {
   background-color: #ee997b;
   position:relative;
 }
+
+.styled-select.slate select {
+  border: 1px solid #ccc;
+  font-size: 16px;
+  height: 34px;
+  width: 268px;
+  padding-left: 10px;
+}

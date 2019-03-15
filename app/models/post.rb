@@ -12,4 +12,6 @@ class Post < ApplicationRecord
   scope :order_by, -> {order created_at: :desc}
   scope :filter_post_by_type, -> category_name {Post.includes(:category)
     .where(categories: {name: category_name}) unless category_name.nil?}
+
+  scope :order_by_relative_category, -> category {where(category_id: category)}
 end

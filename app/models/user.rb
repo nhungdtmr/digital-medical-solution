@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  before_validation :set_default_role, on: :create
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   devise :omniauthable, :omniauth_providers => [:google_oauth2]
@@ -25,5 +26,9 @@ class User < ApplicationRecord
         password: password, password_confirmation: password)
     end
     user
+  end
+
+  def set_default_role
+    self.role ||= :member
   end
 end
