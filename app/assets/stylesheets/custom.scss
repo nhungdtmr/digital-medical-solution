@@ -1932,3 +1932,32 @@ video {
   background-color: #e7e7e7; 
   color: black;
 }
+
+input, textarea { 
+  display: block; 
+}
+
+.mapouter {
+  text-align:right;
+  height:367px;
+  width:545px;
+}
+.gmap_canvas {
+  overflow:hidden;
+  background:none!important;
+  height:367px;
+  width:545px;
+}
+
+.mapouter-fo{
+  text-align:right;
+  height:172px;
+  width:687px;
+}
+
+.gmap_canvas-fo {
+  overflow:hidden;
+  background:none!important;
+  height:172px;
+  width:687px;
+}

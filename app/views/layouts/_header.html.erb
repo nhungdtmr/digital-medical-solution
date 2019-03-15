@@ -18,7 +18,7 @@
               <li class="dropdown-inside"><%= link_to t(".video"), videos_path %></li>
             </ul>
           </li>
-          <li><%= link_to t(".contact"), static_pages_contact_path %></li>
+          <li><%= link_to t(".contact"), new_message_path %></li>
           <li class="dropdown">
             <% if can? :create, Post %>
               <%= link_to t(".upload"), class:"dropdown-toggle", data: {toggle:"dropdown"} %>

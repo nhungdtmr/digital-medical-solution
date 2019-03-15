@@ -13,6 +13,8 @@ Rails.application.routes.draw do
       resources :comments, only: %i(create destroy)
     end
     resources :videos
+    get "contact-me", to: "messages#new", as: "new_message"
+    post "contact-me", to: "messages#create", as: "create_message"
   end
 
   namespace :admin do
