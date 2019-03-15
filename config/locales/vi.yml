@@ -41,6 +41,10 @@ vi:
         sign_up: "Đăng ký tài khoản mới"
         forgot_pass: "Quên mật khẩu?"
         sign_in_with: "Đăng nhập với Google!"
+  follows:
+    follow_form:
+      unfollow: "Hủy theo dõi"
+      follow: "Theo dõi"
   layouts:
     application:
       title: "Yoga Sprouts"
@@ -123,7 +127,7 @@ vi:
       stroke: " /"
       post_by: "Đăng bởi: "
       comment: "Bình luận"
-      comment_count: " bình luận |"
+      comment_count: " Bình luận: "
       author1: "Bob Harper"
       content1: "Yoga là suối dòng của tuổi trẻ. Bạn chỉ có thể trẻ mãi khi xương cốt của mình dẻo dai."
       author2: "T. Guillemets"

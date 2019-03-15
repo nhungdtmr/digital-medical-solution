@@ -14,7 +14,14 @@
                   <h2><%= @post.title %></h2>
                   <ul class="list-inline">
                     <li class="text-black"><%= t ".post_by" %><%= @post.user_name %><%= t ".stroke" %></li>
-                    <li><a href="#" class="text-black"><%= @post.comments.count %><%= t ".comment_count" %></a></li>
+                    <li>
+                      <% if user_signed_in? %>
+                        <div id="follow_user">
+                          <%= render :partial => "follows/follow_form", :locals => {:user => @user} %>
+                        </div>
+                      <% end %>
+                    </li>
+                    <li><a href="#" class="text-black"><%= t ".comment_count" %><%= @post.comments.count %></a></li>
                     <% if user_signed_in? %>
                       <% if current_user? @post.user_id %>
                         <li class="text-finence"><%= link_to t(".edit"), edit_post_path(@post.id) %><%= t ".stroke" %></li>
