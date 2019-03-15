@@ -21,26 +21,7 @@
     <div class="socail_share text-right m-top-60">
       <ul class="list-inline text-uppercase">
         <li><%= t ".share" %></li>
-        <li>
-          <%= link_to do %>
-            <i class="fa fa-facebook"></i>
-          <% end %>
-        </li>
-        <li>
-          <%= link_to do %>
-            <i class="fa fa-twitter"></i>
-          <% end %>
-          </li>
-        <li>
-          <%= link_to do %>
-            <i class="fa fa-google-plus"></i>
-          <% end %>
-          </li>
-        <li>
-          <%= link_to do %>
-            <i class="fa fa-instagram"></i>
-          <% end %>
-        </li>
+        <li><%= social_share_button_tag(@video.name) %></li>
       </ul>
     </div>
     <hr />

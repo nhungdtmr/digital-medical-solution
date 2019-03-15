@@ -2,6 +2,7 @@
 @import 'bootstrap';
 @import 'font-awesome';
 @import 'rails_emoji_picker';
+@import 'social-share-button';
 
 html, body {
   background-color: #fff;
@@ -2013,4 +2014,14 @@ input, textarea {
   height: 34px;
   width: 268px;
   padding-left: 10px;
+}
+
+$size: 22px;
+
+.social-share-button {
+  .ssb-icon {
+    background-size: $size $size;
+    height: $size;
+    width: $size;
+  }
 }

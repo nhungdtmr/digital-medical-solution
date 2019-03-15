@@ -6,4 +6,5 @@
 //= require turbolinks
 //= require ckeditor/init
 //= require rails_emoji_picker
+//= require social-share-button
 //= require_tree .
