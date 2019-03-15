@@ -1,4 +1,4 @@
-<section id="blog_details" class="blog_details">
+<section id="blog_details" class="blog_details m-top-60">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -10,16 +10,15 @@
                   <span><%= l(@post.created_at, format: :short) %></span> <br />
                   <span><%= l(@post.created_at, format: :long) %></span>
                 </div>
-                <div class="head_text">
+                <div class="col-md-10 head_text m-bottom-30">
                   <h2><%= @post.title %></h2>
                   <ul class="list-inline">
-                    <li class="text-black"><%= link_to @post.category_name %><%= t ".stroke" %></li>
-                    <li class="text-black"><%= @post.user_name %><%= t ".stroke" %></li>
+                    <li class="text-black"><%= t ".post_by" %><%= @post.user_name %><%= t ".stroke" %></li>
                     <li><a href="#" class="text-black"><%= @post.comments.count %><%= t ".comment_count" %></a></li>
                     <% if user_signed_in? %>
                       <% if current_user? @post.user_id %>
-                        <li class="text-black"><%= link_to t(".edit"), edit_post_path(@post.id) %><%= t ".stroke" %></li>
-                        <li class="text-black"><%= link_to t(".delete"), post_path(@post.id), method: :delete, data: {confirm: t(".confirm_delete")}, class: "delete" %></li>
+                        <li class="text-finence"><%= link_to t(".edit"), edit_post_path(@post.id) %><%= t ".stroke" %></li>
+                        <li class="text-finence"><%= link_to t(".delete"), post_path(@post.id), method: :delete, data: {confirm: t(".confirm_delete")}, class: "delete" %></li>
                       <% end %>
                     <% end %>
                   </ul>
@@ -74,40 +73,46 @@
       <div class="col-md-4">
         <div class="blog_saidbar sm-m-top-70">
           <div class="said_ctg fix">
-            <h6 class="text-uppercase"><%= t ".category" %></h6>
-            <ul class="text-uppercase m-top-40">
-              <% @categories.each do |cate| %>
-                <li>
-                  <%= link_to do %>
-                    <span ><%= cate.name %></span>
-                  <% end %>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-          <div class="said_post fix m-top-70">
-            <h6 class="m-bottom-40 text-uppercase"><%= t ".recent_post" %></h6>
-            <% @posts.each do |post| %>
-              <div class="post_item">
-                <div class="item_img">
-                  <%= image_tag post.thumbnail.to_s, alt: "" %>
-                </div>
-                <div class="item_text">
-                  <h6><%=link_to post.title, post_path(post.id) %></h6>
-                  <p><i class="fa fa-clock-o"></i><%= post.created_at %></p>
+            <div class="blog_fashion_right">
+              <div class="fashion_test text-center">
+                <%= link_to image_tag("yoga2.jpg"), "#" %>
+                <h6 class="m-top-20"><%= t ".author1" %></h6>
+                <p class="m-top-20"><%= t ".content1" %></p>
+                <img class="m-top-20" src="assets/images/blog-sign.png" alt="" />
+              </div>
+              <div class="fashion_praspect m-top-40">
+                <div class="fashion_praspect_inner bg-black">
+                  <p class="text-white"><%= t ".content2" %></p>
+                  <p class="text-white"><%= t ".author2" %></p>
                 </div>
               </div>
-            <% end %>
+            </div>
           </div>
-          <div class="said_arc fix m-top-70">
-            <h6 class="text-uppercase">archives</h6>
-            <ul class="m-top-40">
-              <li><a href="">september 2015 <span class="pull-right">(29)</span></a></li>
-              <li><a href="">august 2015 <span class="pull-right">(29)</span></a></li>
-              <li><a href="">july 2015 <span class="pull-right">(29)</span></a></li>
-              <li><a href="">june 2015 <span class="pull-right">(29)</span></a></li>
-            </ul>
-          </div>
+        </div>
+        <hr />
+        <div class="said_post fix m-top-70">
+          <h6 class="m-bottom-40 text-uppercase"><%= t ".recent_post" %></h6>
+          <% @posts.each do |post| %>
+            <div class="post_item">
+              <div class="item_img">
+                <%= image_tag post.thumbnail.to_s, alt: "" %>
+              </div>
+              <div class="item_text">
+                <h6><%=link_to post.title, post_path(post.id) %></h6>
+                <p><i class="fa fa-clock-o"></i><%= post.created_at %></p>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        <div class="said_arc fix m-top-70">
+          <h6 class="text-uppercase">archives</h6>
+          <ul class="m-top-40">
+            <li><a href="">september 2015 <span class="pull-right">(29)</span></a></li>
+            <li><a href="">august 2015 <span class="pull-right">(29)</span></a></li>
+            <li><a href="">july 2015 <span class="pull-right">(29)</span></a></li>
+            <li><a href="">june 2015 <span class="pull-right">(29)</span></a></li>
+          </ul>
+        </div>
       </div><!-- End off col-md-4 -->
     </div><!-- End off row -->
   </div><!-- End off container -->

@@ -48,10 +48,15 @@ vi:
       title: "Yoga Sprouts"
       home: "Yoga"
       contact: "Liên hệ"
+      asana: "Asana"
       post: "Bài viết"
       practice: "Thực hành"
-      yoga: "Yoga nâng cao"
+      yoga: "Yoga +"
       video: "Video"
+      life: "Sống"
+      awakelive: "Sống tỉnh thức"
+      live_excitedly: "Sống hứng khởi"
+      happy_life: "Sống hạnh phúc"
       quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."
       author: "Debasish Mridha"
       learn_more: "Tìm hiểu thêm"
@@ -100,10 +105,7 @@ vi:
   posts:
     index:
       read_more: "...Đọc thêm"
-      author1: "Bob Harper"
-      content1: "Yoga là suối dòng của tuổi trẻ. Bạn chỉ có thể trẻ mãi khi xương cốt của mình dẻo dai."
-      author2: "T. Guillemets"
-      content2: "Một nhiếp ảnh gia khiến người khác tạo dáng cho các bức ảnh của mình. Một giáo viên Yoga khiến người khác tạo dáng cho chính bản thân họ."
+      vote: "Lượt thích: "
     new:
       new_post_title: "Tạo bài viết"
       save: "Đăng bài"
@@ -118,9 +120,14 @@ vi:
       edit: "Sửa"
       delete: "Xóa"
       space: " "
-      stroke: " |"
+      stroke: " /"
+      post_by: "Đăng bởi: "
       comment: "Bình luận"
       comment_count: " bình luận |"
+      author1: "Bob Harper"
+      content1: "Yoga là suối dòng của tuổi trẻ. Bạn chỉ có thể trẻ mãi khi xương cốt của mình dẻo dai."
+      author2: "T. Guillemets"
+      content2: "Một nhiếp ảnh gia khiến người khác tạo dáng cho các bức ảnh của mình. Một giáo viên Yoga khiến người khác tạo dáng cho chính bản thân họ."
     edit:
       title: "Sửa bài viết"
       update: "Cập nhật"
@@ -132,6 +139,7 @@ vi:
       description: "Những bài viết về thực hành và lối sống yoga được Yoga Sprouts chọn lọc viết và dịch. Hy vọng bạn sẽ tìm thấy những thông tin, kiến thức hay câu chuyện hữu ích"
       yogis_watch: "Yogis xem"
       des_watch: "Những video hay và bổ ích được Yoga Sprouts tuyển chọn dịch và phụ đề"
+      read_more: "...đọc thêm"
   videos:
     no_video: "Không có video nào"
     new:

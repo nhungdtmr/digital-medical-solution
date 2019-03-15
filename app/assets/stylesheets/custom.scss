@@ -103,6 +103,15 @@ section { overflow: hidden; }*/
 .bg-black{background-color: #212121;}
 .bg-white{background-color: #fff;}
 
+.image {
+  width: 450px;
+  height: 230px;
+  transition: all .2s ease-in-out;
+}
+.image:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 img {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -116,7 +125,6 @@ a:hover,
 a:active,
 a:focus {
  text-decoration: none;
- color: #000;
 }
 a,
 button,
@@ -1866,6 +1874,11 @@ Blog Details Page
 
 video {
   width: 350px;
+}
+
+#glyphicon-index {
+  font-size: 15px;
+  color: red; 
 }
 
 .glyphicon {

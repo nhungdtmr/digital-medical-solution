@@ -1,4 +1,4 @@
-array = ["Hatha", "Ashtanga", "Iyengar", "Kundalini", "Vinyasa"]
+array = ["Asana", "Thực hành", "Yoga +", "Sống tỉnh thức", "Sống hứng khởi", "Sống hạnh phúc"]
 
 array.each do |cate|
   Category.create! name: "#{cate}"
@@ -22,3 +22,8 @@ User.create(name: name, email: email, password: password, role: role)
   password = "111111"
   User.create!(name: name, email: email, password: password)
 end
+
+Post.create!(title: "Tính trị liệu của Chuỗi cơ bản Ashtanga Yoga",
+             content: "Tính trị liệu của Chuỗi cơ bản Ashtanga Yoga",
+             user_id: 2,
+             category_id: 1)
