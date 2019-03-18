@@ -11,6 +11,7 @@
         <div>
           <br>
           <%= form_for resource, as: resource_name, url: session_path(resource_name), html: {id: "sign_in"} do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
             <div class="wrap">
               <div class="form-group">
                 <label for="email"><%= t ".email" %></label>

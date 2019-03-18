@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-  	resources :users
+    resources :users
+    resources :posts
+    resources :videos
   end
 end
