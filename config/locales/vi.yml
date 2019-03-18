@@ -5,6 +5,15 @@ vi:
       long: "%d, %b "
       short: "%Y"
   admin:
+    posts:
+      index:
+        title: "Tất cả bài viết"
+        confirm_delete: "Bạn chắc chắn chứ?"
+        index: "STT"
+        title_post: "Tiêu đề"
+        content: "Nội dung"
+        delete: "Xóa"
+        read_more: "Đọc thêm"
     users:
       index:
         title: "Tất cả người dùng"
@@ -17,6 +26,14 @@ vi:
         address: "Địa chỉ"
         delete_fail: "Không xóa được"
         delete_success: "Xóa thành công"
+    videos:
+      index:
+        title: "Tất cả video"
+        confirm_delete: "Bạn chắc chắn chứ?"
+        index: "STT"
+        title_video: "Tiêu đề"
+        content: "Video"
+        delete: "Xóa"
   comments:
     comment:
       reply: "Trả lời"

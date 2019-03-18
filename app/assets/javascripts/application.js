@@ -3,7 +3,7 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
+//= require jquery.turbolinks
 //= require ckeditor/init
 //= require rails_emoji_picker
 //= require social-share-button
