@@ -29,6 +29,7 @@ gem "figaro"
 gem "closure_tree"
 gem "rails_emoji_picker"
 gem "social-share-button"
+gem "public_activity"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
