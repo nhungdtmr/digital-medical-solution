@@ -1,6 +1,7 @@
 user_page: 20
 post_page: 20
 admin_user_page: 10
+admin_activity_page: 20
 min_length_text: 100
 max_length_text: 600
 recent_post: 5

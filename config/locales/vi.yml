@@ -5,6 +5,9 @@ vi:
       long: "%d, %b "
       short: "%Y"
   admin:
+    activities:
+      index:
+        title: "Hoạt động"
     posts:
       index:
         title: "Tất cả bài viết"
@@ -101,6 +104,9 @@ vi:
     admin_nav_side:
       users: "Quản lý người dùng"
       all_user: " Tất cả người dùng"
+      all_post: "Tất cả bài viết"
+      all_video: "Tất cả video"
+      activity: "Hoạt động"
   message_mailer:
     contact_me:
       subject: "Message from www.murdo.ch"
@@ -152,6 +158,32 @@ vi:
     edit:
       title: "Sửa bài viết"
       update: "Cập nhật"
+  public_activity:
+    comment:
+      create:
+        add_comment: "Bình luận bài viết của"
+        error: "Lỗi"
+        remove_comment: "Xóa bình luận"
+    post:
+      create:
+        add_post: "Tạo mới bài viết"
+        error: "Lỗi"
+      update:
+        update: "Sửa bài viết"
+        error: "Lỗi"
+      destroy:
+        destroy: "Xóa bài viết"
+        error: "Lỗi"
+    video:
+      create:
+        add_video: "Thêm video"
+        error: "Lỗi"
+      update:
+        update: "Sửa video"
+        error: "Lỗi"
+      destroy:
+        destroy: "Xóa video"
+        error: Lỗi
   static_pages:
     home:
       quotations: "Yoga mang bạn hòa mình vào thiên nhiên và dạy cho bạn cách tò mò một cách hào hứng về thế giới tâm hồn."

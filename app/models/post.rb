@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  include PublicActivity::Model
+  tracked owner: -> (controller, model) {controller.current_user}
   belongs_to :user
   belongs_to :category
   has_many :comments
