@@ -12,15 +12,15 @@
 
 ActiveRecord::Schema.define(version: 2019_03_18_061727) do
 
-  create_table "activities", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "activities", force: :cascade do |t|
     t.string "trackable_type"
-    t.bigint "trackable_id"
+    t.integer "trackable_id"
     t.string "owner_type"
-    t.bigint "owner_id"
+    t.integer "owner_id"
     t.string "key"
     t.text "parameters"
     t.string "recipient_type"
-    t.bigint "recipient_id"
+    t.integer "recipient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type"
@@ -31,13 +31,13 @@ ActiveRecord::Schema.define(version: 2019_03_18_061727) do
     t.index ["trackable_type", "trackable_id"], name: "index_activities_on_trackable_type_and_trackable_id"
   end
 
-  create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "ckeditor_assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false
     t.string "data_content_type"
     t.integer "data_file_size"
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 2019_03_18_061727) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
-  create_table "comment_hierarchies", id: false, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "comment_hierarchies", id: false, force: :cascade do |t|
     t.integer "ancestor_id", null: false
     t.integer "descendant_id", null: false
     t.integer "generations", null: false
@@ -57,10 +57,10 @@ ActiveRecord::Schema.define(version: 2019_03_18_061727) do
     t.index ["descendant_id"], name: "comment_desc_idx"
   end
 
-  create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "comments", force: :cascade do |t|
     t.string "content"
-    t.bigint "user_id"
-    t.bigint "post_id"
+    t.integer "user_id"
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "parent_id"
@@ -68,21 +68,21 @@ ActiveRecord::Schema.define(version: 2019_03_18_061727) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "emotions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "emotions", force: :cascade do |t|
     t.string "status"
-    t.bigint "user_id"
-    t.bigint "post_id"
+    t.integer "user_id"
+    t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_emotions_on_post_id"
     t.index ["user_id"], name: "index_emotions_on_user_id"
   end
 
-  create_table "follows", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "follows", force: :cascade do |t|
     t.string "followable_type", null: false
-    t.bigint "followable_id", null: false
+    t.integer "followable_id", null: false
     t.string "follower_type", null: false
-    t.bigint "follower_id", null: false
+    t.integer "follower_id", null: false
     t.boolean "blocked", default: false, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -92,33 +92,19 @@ ActiveRecord::Schema.define(version: 2019_03_18_061727) do
     t.index ["follower_type", "follower_id"], name: "index_follows_on_follower_type_and_follower_id"
   end
 
-  create_table "friendly_id_slugs", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
-    t.string "slug", null: false
-    t.integer "sluggable_id", null: false
-    t.string "sluggable_type", limit: 50
-    t.string "scope"
-    t.datetime "created_at"
-    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, length: { slug: 70, scope: 70 }
-    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", length: { slug: 140 }
-    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
-    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
-  end
-
-  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "content", limit: 4294967295
     t.string "thumbnail"
-    t.bigint "user_id"
-    t.bigint "category_id"
+    t.integer "user_id"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "slug"
     t.index ["category_id"], name: "index_posts_on_category_id"
-    t.index ["slug"], name: "index_posts_on_slug"
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
-  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "avatar"
     t.string "address"
@@ -133,22 +119,20 @@ ActiveRecord::Schema.define(version: 2019_03_18_061727) do
     t.datetime "remember_created_at"
     t.string "provider"
     t.string "uid"
-    t.string "slug"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["slug"], name: "index_users_on_slug"
   end
 
-  create_table "videos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "videos", force: :cascade do |t|
     t.string "name"
     t.string "video_url"
-    t.bigint "user_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
-  create_table "votes", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+  create_table "votes", force: :cascade do |t|
     t.string "votable_type"
     t.integer "votable_id"
     t.string "voter_type"
@@ -162,11 +146,4 @@ ActiveRecord::Schema.define(version: 2019_03_18_061727) do
     t.index ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
   end
 
-  add_foreign_key "comments", "posts"
-  add_foreign_key "comments", "users"
-  add_foreign_key "emotions", "posts"
-  add_foreign_key "emotions", "users"
-  add_foreign_key "posts", "categories"
-  add_foreign_key "posts", "users"
-  add_foreign_key "videos", "users"
 end
