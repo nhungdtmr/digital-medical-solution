@@ -5,37 +5,28 @@
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
           <i class="fa fa-bars"></i>
         </button>
-        <%= link_to image_tag("logo (1).png"), root_url %>
+        <%= link_to root_url do %>
+          <span>digital medical solution</span>
+          <% end %>
       </div>
       <div class="collapse navbar-collapse" id="navbar-menu">
         <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
           <li class="dropdown">
-            <%= link_to t(".home"), class:"dropdown-toggle", data: {toggle:"dropdown"} %>
+            <%= link_to "HOME", class:"dropdown-toggle", data: {toggle:"dropdown"} %>
             <ul class="dropdown-menu">
-              <li class="dropdown-inside"><%= link_to t(".post"), posts_path(category: t(".asana"))%></li>
-              <li class="dropdown-inside"><%= link_to t(".practice"), posts_path(category: t(".practice")) %></li>
-              <li class="dropdown-inside"><%= link_to t(".yoga"), posts_path(category: t(".yoga")) %></li>
-              <li class="dropdown-inside"><%= link_to t(".video"), videos_path %></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <%= link_to t(".life"), class:"dropdown-toggle", data: {toggle:"dropdown"} %>
-            <ul class="dropdown-menu">
-              <li class="dropdown-inside"><%= link_to t(".awakelive"), posts_path(category: t(".awakelive"))%></li>
-              <li class="dropdown-inside"><%= link_to t(".live_excitedly"), posts_path(category: t(".live_excitedly")) %></li>
-              <li class="dropdown-inside"><%= link_to t(".happy_life"), posts_path(category: t(".happy_life")) %></li>
+              <li class="dropdown-inside"><%= link_to "BỆNH VIỆN", posts_path(category: t(".asana"))%></li>
+              <li class="dropdown-inside"><%= link_to "PHÒNG KHÁM", posts_path(category: t(".practice")) %></li>
+              <li class="dropdown-inside"><%= link_to "HIỆU THUỐC", posts_path(category: t(".yoga")) %></li>
+              <li class="dropdown-inside"><%= link_to "THUỐC LÁ", videos_path %></li>
+              <li class="dropdown-inside"><%= link_to "THUỐC BẮC", videos_path %></li>
+              <li class="dropdown-inside"><%= link_to "THẨM MỸ VIỆN", videos_path %></li>
+              <li class="dropdown-inside"><%= link_to "RĂNG HÀM MẶT", videos_path %></li>
+
+
             </ul>
           </li>
           <li><%= link_to t(".contact"), new_message_path %></li>
-          <li class="dropdown">
-            <% if can? :create, Post %>
-              <%= link_to t(".upload"), class:"dropdown-toggle", data: {toggle:"dropdown"} %>
-              <ul class="dropdown-menu">
-                <li class="dropdown-inside"><%= link_to t(".create_post"), posts_new_path %></li>
-                <li class="dropdown-inside"><%= link_to t(".create_video"), new_video_path %></li>
-              </ul>
-            <% end %>
-          </li>
+          <li><%= link_to "TIN TỨC", new_message_path %></li>
           <% if user_signed_in? %>
             <% if current_user.admin? %>
               <li><%= link_to t(".admin_page"), admin_users_path %></li>
