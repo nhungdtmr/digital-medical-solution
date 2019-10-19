@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     resources :videos
     get "contact-me", to: "messages#new", as: "new_message"
     post "contact-me", to: "messages#create", as: "create_message"
+    resources :show_clinics, only: :index
   end
 
   namespace :admin do

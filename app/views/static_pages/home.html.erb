@@ -12,18 +12,20 @@
                 <input class="form-control" type="text" name="keywords" id="keywords" placeholder="Tìm tên bệnh viện, loại bệnh viện">
               </div>
               <div class="location col-md-2 col-xs-6">
-                <select class="form-control" id="city_search">
+                <select class="form-control" id="city_search" style="height: 48px;">
                   <option value="0">Thành Phố</option>
                     <option value="ho-chi-minh">Hồ Chí Minh</option>
                 </select>
               </div>
               <div class="location col-md-2 col-xs-6">
-                <select class="form-control" id="district_search">
+                <select class="form-control" id="district_search" style="height: 48px;">
                   <option value="0">Quận/ huyện</option>
                 </select>
               </div>
               <div class="btn-search col-md-2 col-xs-12">
-                <button class="btn" id="searchKeywords"><i class="fa fa-search" aria-hidden="true"></i> TÌM NGAY</button>
+                <%= link_to show_clinics_path, class: "btn btn-default" do %>
+                  <i class="fa fa-search" aria-hidden="true"></i>Tìm ngay
+                <% end %>
               </div>
             </div>
           </div>
